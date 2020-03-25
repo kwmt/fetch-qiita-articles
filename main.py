@@ -3,7 +3,8 @@ import json
 from urllib.parse import urlparse
 import os.path
 
-qiita_url = "https://qiita.com/api/v2/users/kwmt@github/items?page=1&per_page=20"
+user = 'kwmt@github'
+qiita_url = 'https://qiita.com/api/v2/users/' + user + '/items?page=1&per_page=20'
 ua = 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36'
 headers = {'User-Agent' : ua}
 response = requests.get(qiita_url, headers=headers).text
